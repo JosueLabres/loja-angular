@@ -1,0 +1,6 @@
+
+<mat-list role="list">
+  <mat-list-item *ngFor="let categoria of categorias" role="listitem">
+    <button (click)="onSubmit(categoria)" mat-button><a >{{ categoria}}</a></button>
+    </mat-list-item>
+</mat-list>

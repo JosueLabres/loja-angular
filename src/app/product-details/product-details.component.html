@@ -1,0 +1,30 @@
+<div *ngIf="product; else elseBlock" style="margin:auto;">
+  <mat-card class="example-card">
+    <img class="card-img" mat-card-image src="{{product.image}}" alt={{product.name}}>
+    <div>
+      <mat-card-header>
+        <h1>{{product.name}}</h1>
+      </mat-card-header>
+      <mat-card-content>
+        <span>{{ product.price | currency }}</span>
+        <span>opções disponiveis</span>
+        <mat-button-toggle-group name="" aria-label="">
+          <mat-button-toggle value="bold">P</mat-button-toggle>
+          <mat-button-toggle value="M">M</mat-button-toggle>
+          <mat-button-toggle value="G">G</mat-button-toggle>
+          <mat-button-toggle value="GG">GG</mat-button-toggle>
+          <mat-button-toggle value="GGG">GGG</mat-button-toggle>
+        </mat-button-toggle-group>
+       
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Comprar</button>
+      </mat-card-actions>
+      <p>{{  product.description }}</p>
+      
+    </div>
+  </mat-card>
+</div>
+
+<app-product-list [products]="productsRelacionados"></app-product-list>
+<ng-template #elseBlock>produto não existe</ng-template>

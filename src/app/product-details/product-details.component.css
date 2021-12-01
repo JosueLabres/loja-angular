@@ -1,0 +1,55 @@
+.example-card {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: none;
+}
+
+.card-img {
+  width: 700px;
+}
+
+
+h1 {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+}
+.product {
+  margin: 0.5%;
+}
+
+ 
+.price {
+  color: #444;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.name {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.example-header-image {
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.example-card-relacionado {
+  max-width: 300px;
+  margin: 10px;
+  
+}

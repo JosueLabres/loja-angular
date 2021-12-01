@@ -1,0 +1,25 @@
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <ng-container class="product" *ngFor="let product of products">
+    <mat-card class="example-card" fxFlex="0 1 calc(33,3% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)"
+      fxFlex.lt-sm="100%">
+      <mat-card-content>
+        <a (click)="onSubmit(product.categoria, product.id)"><img class="example-header-image" mat-card-image src="{{product.image}}" alt="{{product.name}}"></a>
+        <h3>
+          <a (click)="onSubmit(product.categoria, product.id)" class="name" [title]="product.name + ' details'">
+            {{ product.name }}
+          </a>
+        </h3>
+        <span class="price">{{ product.price | currency }}</span>
+        <p *ngIf="product.description">
+          {{ product.description }}
+        </p>
+        
+        <button (click)="share()">
+          adicionar ao carrinho
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
